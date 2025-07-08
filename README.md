@@ -16,7 +16,7 @@ Este proyecto es una API REST desarrollada con **.NET 9 (Minimal API)** y **Enti
 
 #### 1. Clonar el proyecto
 
-git clone https://github.com/AndresCanadas/GestionIncidencias.git
+URL GIT: https://github.com/AndresCanadas/GestionIncidencias.git
 
 #### 2. Configuración BBDD
 
