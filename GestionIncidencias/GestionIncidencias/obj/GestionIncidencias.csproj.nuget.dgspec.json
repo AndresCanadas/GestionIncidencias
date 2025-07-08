@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andresc\\source\\repos\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias.csproj": {}
+    "C:\\Users\\andresc\\Documents\\Programacion\\.NET\\GestorIncidencias\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andresc\\source\\repos\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias.csproj": {
+    "C:\\Users\\andresc\\Documents\\Programacion\\.NET\\GestorIncidencias\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andresc\\source\\repos\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias.csproj",
+        "projectUniqueName": "C:\\Users\\andresc\\Documents\\Programacion\\.NET\\GestorIncidencias\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias.csproj",
         "projectName": "GestionIncidencias",
-        "projectPath": "C:\\Users\\andresc\\source\\repos\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias.csproj",
+        "projectPath": "C:\\Users\\andresc\\Documents\\Programacion\\.NET\\GestorIncidencias\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias.csproj",
         "packagesPath": "C:\\Users\\andresc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andresc\\source\\repos\\GestionIncidencias\\GestionIncidencias\\obj\\",
+        "outputPath": "C:\\Users\\andresc\\Documents\\Programacion\\.NET\\GestorIncidencias\\GestionIncidencias\\GestionIncidencias\\GestionIncidencias\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

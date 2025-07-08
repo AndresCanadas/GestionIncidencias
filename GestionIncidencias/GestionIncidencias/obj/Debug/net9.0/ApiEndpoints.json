@@ -40,7 +40,7 @@
   {
     "ContainingType": "GestionIncidencias.Endpoints.GestorEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapIncidenciasEndpoints\u003Eb__0_1",
-    "RelativePath": "api/estados-data",
+    "RelativePath": "api/estados",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,

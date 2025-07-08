@@ -28,7 +28,7 @@ namespace GestionIncidencias.Endpoints
                 }
             });
 
-            app.MapGet("/api/estados-data", async (AppDBContext db) =>
+            app.MapGet("/api/estados", async (AppDBContext db) =>
             {
 
                 var estados = await db.Estados.ToListAsync();
@@ -48,8 +48,10 @@ namespace GestionIncidencias.Endpoints
 
             app.MapGet("/api/listaIncidencias", async (AppDBContext db) =>
             {
-
-                var incidencias = await db.Incidencias.ToListAsync();
+                var incidencias = await db.Incidencias
+                    .Include(i => i.Empleado)
+                    .Include(i => i.Estado)
+                    .ToListAsync();
                 return Results.Ok(incidencias);
 
 
@@ -68,7 +70,10 @@ namespace GestionIncidencias.Endpoints
             app.MapPost("/api/incidencias", async (IncidenciaModel nuevaIncidencia, AppDBContext db) =>
             {
                 // Asignamos la fecha actual si no viene en el JSON
-                nuevaIncidencia.FechaCreacion = DateTime.Now;
+                if (nuevaIncidencia.FechaCreacion.Equals(null))
+                {
+                    nuevaIncidencia.FechaCreacion = DateTime.Now;
+                }
 
                 if (nuevaIncidencia.EmpleadoID.Equals(null))
                 {
@@ -122,7 +127,7 @@ namespace GestionIncidencias.Endpoints
                 {
                     var estadoFiltrado = await db.Estados.FirstOrDefaultAsync(e => e.Nombre == estado);
 
-                    var incidenciasFiltradas = await db.Incidencias.Where(i => i.EstadoID == estadoFiltrado.EstadoID).ToListAsync();
+                    var incidenciasFiltradas = await db.Incidencias.Where(i => i.EstadoID == estadoFiltrado.EstadoID).Include(i => i.Empleado).ToListAsync();
 
                     await db.SaveChangesAsync();
 
