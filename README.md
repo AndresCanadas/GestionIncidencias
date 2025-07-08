@@ -156,6 +156,11 @@ https://andresteam-1205.postman.co/workspace/GestionIncidencias~be043a24-03fc-4a
 
 ---
 
+## Servicio Incidencias
+
+Creado un Servicio que borra incidencias "Cambia el estado a Cerrada" en la consola del proyecto cada 1 min aparecera un mensaje con las incidencias abiertas y revisará si alguna incidencia tiene más de 7 días para despues modificarla. 
+La clase que se ocupa de ello es: `ServicioIncidencias.cs` .
+
 ---
 
 ## Comprobación de conexión
