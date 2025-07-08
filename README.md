@@ -48,7 +48,7 @@ Una vez creada la instancia y ejecutado el ScriptSQL se puede conexionar localme
 
 En `appsettings.json`:
 
-> Local Visual Studio:
+> Visual Studio SQL Server:
 
 ```json
 "ConnectionStrings": {
