@@ -46,21 +46,21 @@ Ejecuta el archivo ScriptGestionIncidenciasDB.sql y ScriptDatos.sql respectivame
 
 Una vez creada la instancia y ejecutado el ScriptSQL se puede conexionar localmente en el visual Studio o con el SQL Server Management Studio (SSMS), las cadenas de conexión son diferentes.
 
+En `appsettings.json`:
+
 > Local Visual Studio:
 
 ```json
 "ConnectionStrings": {
-    "DefaultConnection": "Initial Catalog=GestorIncidenciasDB;Integrated Security=True;Trust Server Certificate=True;"
+    "DefaultConnection": "Initial Catalog=NombreBaseDatos;Integrated Security=True;Trust Server Certificate=True;"
 }
 ```
 
 > SQL Server Management Studio (SSMS):
 
-En `appsettings.json`:
-
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Server=NombreDeTuInstancia;Database=GestorIncidenciasDB;Trusted_Connection=True;TrustServerCertificate=True;"
+  "DefaultConnection": "Server=NombreDeTuInstancia;Database=NombreBaseDatos;Trusted_Connection=True;TrustServerCertificate=True;"
 }
 ```
 
@@ -85,7 +85,7 @@ La API estará disponible en `https://localhost:5174` o `http://localhost:7107`
 | GET    | `/api/empleados`      | Lista todos los empleados |
 | POST   | `/api/empleados/add`  | Crear nuevo empleado      |
 
-**Ejemplo POST:**
+**Ejemplo POST: `/api/empleados/add` **
 
 ```json
 {
@@ -104,7 +104,7 @@ La API estará disponible en `https://localhost:5174` o `http://localhost:7107`
 | PUT    | `/api/incidencias/{id}/fecha`     | Editar fecha a incidencia            |
 | PUT    | `/api/incidencias/{id}/asignar`   | Asignar empleado a incidencia        |
 
-**Ejemplo POST:**
+**Ejemplo POST: `/api/incidencias` **
 
 ```json
 {
@@ -116,13 +116,17 @@ La API estará disponible en `https://localhost:5174` o `http://localhost:7107`
 }
 ```
 
-**Ejemplo PUT asignación o fecha:**
+**Ejemplo PUT asignación o fecha**
+
+ `/api/incidencias/{id}/asignar` :
 
 ```json
 {
   "EmpleadoID": 2
 }
 ```
+
+`/api/incidencias/{id}/fecha` :
 
 ```json
 {
