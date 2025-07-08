@@ -11,8 +11,8 @@ VALUES
 
 INSERT INTO Incidencias (Titulo, Descripcion, FechaCreacion, EstadoID, EmpleadoID)
 VALUES 
-  ('Pantalla azul', 'El PC se reinicia constantemente con error de pantalla azul.',GETDATE(), 1, 1),
+  ('Pantalla azul', 'El PC se reinicia constantemente con error de pantalla azul.',GETDATE(), 1, 4),
   ('Problemas de red', 'Sin acceso a Internet en el segundo piso.', DATEADD(DAY, -3, GETDATE()), 2, 2),
   ('No imprime', 'La impresora de administración no responde.', DATEADD(DAY, -10, GETDATE()), 1, 1),
-  ('Software caído', 'El sistema de gestión dejó de funcionar.', DATEADD(DAY, -1, GETDATE()), 1, 2);
+  ('Software caído', 'El sistema de gestión dejó de funcionar.', DATEADD(DAY, -1, GETDATE()), 1, 3);
 
